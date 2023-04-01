@@ -35,8 +35,6 @@
 
 # 📖 [BlogApp] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[BlogApp]** is an application that helps users to post, like and comment on the post. This work delineates the usage of ruby on rails as a backend framework with Postgres.
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -72,8 +70,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Like]**
 - **[Post]**
 - **[Comment]**
@@ -84,7 +80,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://google.com)
 
@@ -93,8 +88,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -153,7 +146,6 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Victor Damola**
 
@@ -165,9 +157,7 @@ To run tests, run the following command:
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
+## 🔭 Future Features <a name="future-features"></a>.
 
 - [ ] **[Real time data]**
 - [ ] **[edited mood]**
