@@ -19,9 +19,10 @@ RSpec.describe User, type: :model do
     subject.posts_counter = - 5
     expect(subject).to_not be_valid
   end
- 
+
   it 'recents post' do
-    post = Post.create(title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0, author_id: subject.id)
+    Post.create(title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0,
+                author_id: subject.id)
     expect(subject.recent_posts.length).to eq 1
   end
 end
