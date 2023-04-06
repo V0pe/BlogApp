@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def user; end
 
-  def posts; end
-
   def post; end
+
+  def posts; end
 end
