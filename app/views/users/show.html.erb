@@ -1,1 +1,39 @@
-<h1>User picked</h1>
+<div class="users-list">
+ <div class="single-user">
+<div class="user-image"></div>
+<div class="user-details">
+<div class="user-username"><%= @user.name %></div>
+<div class="user-posts-count">number of posts: 
+<% if @user.posts_counter.to_i > 0 %>
+  <%= @user.posts_counter %>
+<% else %>
+  0
+<% end %>
+</div>
+</div>
+</div>
+<div class="bio">
+<h3>bio</h3>
+<p><%= @user.bio %></p>
+</div>
+<% @user.recent_posts.each do |post| %>
+ <a href='/users/<%= @user.id %>/posts/<%= post.id %>' class='user-link'><div class="single-post">
+<h3>
+Post #<%= @user.recent_posts.index(post)+1 %>
+</h3>
+<p><%= post.text %></p>
+<p style="socials">comments:<% if post.comments_counter.to_i > 0 %>
+  <%= post.comments_counter %>
+<% else %>
+  0
+<% end %>
+, likes :<% if post.likes_counter.to_i > 0 %>
+  <%= post.likes_counter %>
+<% else %>
+  0
+<% end %> 
+</div>
+</a>
+<% end %>
+<a href='/users/<%= @user.id %>/posts/' class='view-all'>See All Posts</a>
+</div>

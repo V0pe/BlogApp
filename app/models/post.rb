@@ -10,6 +10,22 @@ class Post < ApplicationRecord
   def recent_comments
     comments.order(created_at: :desc).limit(5)
   end
+  
+  def user_name
+    author.name
+  end
+
+  def user_posts_counter
+    author.posts_counter
+  end
+  
+  def user_id
+    author.id 
+  end
+
+  def all_comments
+    comments.order(created_at: :desc)
+  end
 
   after_save :update_post_counter
 
