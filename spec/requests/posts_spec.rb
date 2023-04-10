@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
+RSpec.describe 'Posts Controller', type: :request do
   describe 'Posts' do
     it 'returns http success, html content Body ,  Template' do
       get '/users/id/posts'

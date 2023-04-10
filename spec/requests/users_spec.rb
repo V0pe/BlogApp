@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
-  describe 'Users' do
+RSpec.describe 'Users Controllers', type: :request do
+  describe 'Users/user and User' do
     it 'returns 200 success, accurate content html , Template' do
       get '/users/index'
       expect(response).to have_http_status(:success)
