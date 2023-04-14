@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Users Controller', type: :request do
-  describe 'GET #index' do
-    it 'is a success' do
-      get '/users'
-      expect(response).to have_http_status(:ok)
+RSpec.describe 'Users Controllers', type: :request do
+  describe 'Users/user and User' do
+    it 'returns 200 success, accurate content html , Template' do
+      get '/users/index'
+      expect(response).to have_http_status(:success)
+      expect(response.body).to include('User picked')
+      expect(response).to render_template(:show)
     end
     it "renders 'index' template" do
       get '/users'
