@@ -32,7 +32,7 @@
 }
 
 .user-image {
-  background-image: url("../images/person.png");
+  background-image: url("../assets/person.png");
   border: 0.3rem solid black;
   background-position: center;
   background-size: cover;
