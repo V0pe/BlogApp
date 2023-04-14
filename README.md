@@ -128,7 +128,7 @@ To run tests, run the following command:
 
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  Rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
