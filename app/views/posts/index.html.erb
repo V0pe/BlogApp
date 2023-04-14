@@ -2,10 +2,10 @@
  <div class="single-user">
 <div class="user-image"></div>
 <div class="user-data">
-<div class="user-username"><%= @posts[0].user_name %></div>
+<div class="user-username"><%= @user.name %></div>
 <div class="user-posts">number of posts: 
-<% if @posts[0].user_posts_counter.to_i > 0 %>
-  <%= @posts[0].user_posts_counter %>
+<% if @user.posts_counter.to_i > 0 %>
+  <%= @user.posts_counter %>
 <% else %>
   0
 <% end %>

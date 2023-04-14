@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @recent_post = Post.where(author_id: params[:id]).order(created_at: :desc).limit(3)
+    @user = User.find(params[:id])
   end
 end
