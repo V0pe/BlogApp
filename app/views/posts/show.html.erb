@@ -20,5 +20,28 @@ Comments
 <% @post.all_comments.each do |comment|%>
 <%= comment.author.name %>: <%= comment.text %> <br>
 
-<% end %></div>
+<% end %>
+</div>
+<div class="users-list">
+ <div class="single-post"><center><h1>Add comment as <%= @user.name %></h1></center>
+<%= form_for @comment, url:comments_path do |f| %>
+  <%= f.hidden_field :author_id, value: @post.author.id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.label :text %><br />
+  <%= f.text_area :text, placeholder:'Add your Comment' %><br />
+  <%= f.submit "Submit comment", class:'btn', disable_with: 'Submiting Comment...' %>
+<% end %>
+ </div>
+  </div>
+
+    <div class="users-list">
+ <div class="single-post"><center><h1>Click Heart Below To Add Like<br>
+<%= image_tag '/assets/heart.png', :style => "height:60px;width:60px;"%></center>
+<%= form_for @like, url:likes_path do |f|%>
+  <%= f.hidden_field :author_id, value: @post.author.id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.submit "Like", disable_with: 'updating likes...' %>
+<% end %>
+ </div>
+ </div>
  </div>
