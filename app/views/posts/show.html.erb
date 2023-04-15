@@ -36,7 +36,6 @@ Comments
 
     <div class="users-list">
  <div class="single-post"><center><h1>Click Heart Below To Add Like<br>
-<%= image_tag '/assets/heart.png', :style => "height:60px;width:60px;"%></center>
 <%= form_for @like, url:likes_path do |f|%>
   <%= f.hidden_field :author_id, value: @post.author.id %>
   <%= f.hidden_field :post_id, value: @post.id %>

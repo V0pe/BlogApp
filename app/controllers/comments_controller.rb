@@ -5,7 +5,13 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    redirect_to user_post_path(id: @comment.post_id, user_id: @comment.author_id) if @comment.save
+    if @comment.save
+      @post = @comment.post
+      @post.decrement!(:comments_counter)
+      redirect_to user_post_path(@post.author, @post)
+    else
+      render :new
+    end
   end
 
   private
