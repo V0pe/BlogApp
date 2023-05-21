@@ -15,9 +15,8 @@
 </div>
 <% @user_posts.each do |post| %>
   <a href='/users/<%= post.user_id %>/posts/<%= post.id %>' class='user-link'><div class="single-post">
-<h3>
-Post #<%= @posts.index(post)+1 %>
-</h3>
+<h4>Post <%= post.id %> - <%= post.title %> comments: <%= post.comments_counter %>, likes: <%= post.likes_counter %></h4>
+<h4><%= post.title %></h4>
 <p><%= post.text %></p>
 <p style="socials">comments:<% if post.comments_counter.to_i > 0 %>
   <%= post.comments_counter %>
@@ -39,3 +38,5 @@ Comments
 <% end %></div>
 </a>
 <% end %>
+
+<%= link_to "Add new post", new_user_post_path(@user), class: "add-new-post" %>

@@ -8,6 +8,9 @@
 /.bundle
 node_modules/
 
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
