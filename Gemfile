@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.1'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-#authentictaion and authoriazation 
+# authentictaion and authoriazation
 gem 'devise'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -45,7 +45,7 @@ gem 'ffi', '~> 1.15', '>= 1.15.5'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-#usetailwindcss
+# usetailwindcss
 gem 'tailwindcss-rails'
 
 # Reduces boot times through caching; required in config/boot.rb

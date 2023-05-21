@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   def user_data
     @user_data ||= User.all
   end
+
   def user_posts
     @user_posts ||= Post.all
   end
@@ -17,7 +18,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_in) do |user_params|
       user_params.permit(:email, :encrypted_password)
     end
-    
+
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
       user_params.permit(:name, :email, :password, :password_confirmation)
     end
